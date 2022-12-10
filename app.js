@@ -2,6 +2,8 @@ import express,{json} from 'express' ;
 import router from "./routes/routes.js";
 const app=express();
 const PORT=process.env.PORT || '7000';
+process.env.PORT='7000';
+console.log(process.env.PORT)
 console.log(PORT)
 app.use(json());
 app.use("/api/bankapi",router);
