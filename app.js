@@ -1,7 +1,7 @@
 import express,{json} from 'express' ;
 import router from "./routes/routes.js";
 const app=express();
-const PORT=process.env.PORT | '7000';
+const PORT=process.env.PORT || '7000';
 app.use(json());
 app.use("/api/bankapi",router);
 app.listen(PORT,()=>{
